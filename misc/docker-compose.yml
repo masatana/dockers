@@ -1,0 +1,9 @@
+---
+
+gitbucket:
+    image: takezoe/gitbucket:4
+    ports:
+        - "8080:8080"
+        - "29418:29418"
+    volumes:
+        - ./gitbucketfiles:/gitbucket

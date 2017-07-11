@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+WORKDIR="/tmp"
+IMAGE="hdsol/pandoc"
+
+docker run --rm -v $(pwd):$WORKDIR -u $(stat -c "%u:%g" $(pwd)) -w $WORKDIR hdsol/pandoc "$@"
